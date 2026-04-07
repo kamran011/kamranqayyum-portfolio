@@ -26,6 +26,15 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+.contact-cert {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.contact-cert a {
+  color: var(--accentColor);
+}
 a.contact-social {
   font-size: 25px;
   border-bottom: 1px solid #ccc;

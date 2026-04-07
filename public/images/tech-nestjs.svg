@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a0505"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="128" fill="url(#bg)"/>
+  <!-- NestJS cat paw shape simplified -->
+  <path d="M128 50 C98 50 75 73 75 103 C75 133 98 156 128 156 C158 156 181 133 181 103 C181 73 158 50 128 50Z" fill="#E0234E" opacity="0.85"/>
+  <path d="M95 103 C95 84 110 70 128 70 C146 70 161 84 161 103" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <text x="128" y="205" text-anchor="middle" font-family="system-ui,sans-serif" font-size="26" fill="#E0234E" font-weight="700">NestJS</text>
+</svg>

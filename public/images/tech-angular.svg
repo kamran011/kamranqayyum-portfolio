@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2a0808"/>
+      <stop offset="100%" style="stop-color:#150404"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="128" fill="url(#bg)"/>
+  <!-- Angular shield -->
+  <polygon points="128,44 192,68 178,172 128,200 78,172 64,68" fill="#DD0031"/>
+  <polygon points="128,44 128,200 78,172 64,68" fill="#C3002F"/>
+  <!-- A letter cutout -->
+  <polygon points="128,78 105,152 120,152 128,128 136,152 151,152" fill="white"/>
+  <rect x="111" y="136" width="34" height="10" fill="white"/>
+</svg>
