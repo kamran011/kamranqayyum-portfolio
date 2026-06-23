@@ -17,7 +17,7 @@ export const siteMeta = {
   tagline: "Angular · TypeScript · Enterprise Web · AWS",
 } as const;
 
-export const aboutSummary = `Full-stack engineer with 7+ years building enterprise-scale SaaS and AI-native applications. I work across the stack — Angular, TypeScript, RxJS, and NgRx on the frontend, Node.js and NestJS on the backend — with cloud-native delivery on AWS using serverless and Lambda patterns. I integrate LLMs into production (Claude, OpenAI, Gemini) with prompt engineering, tool calling, RAG, and real-time streaming via SSE and WebSockets. I design modular architectures, mentor engineers, and ship systems with strong engineering standards. I’m also founder of Archivolt, a live AI SaaS for validated software architecture.`;
+export const aboutSummary = `Full-stack engineer with 7+ years building enterprise-scale SaaS and AI-native applications. I work across the stack — Angular, TypeScript, RxJS, and NgRx on the frontend, Node.js and NestJS on the backend with cloud-native delivery on AWS using serverless and Lambda patterns. I integrate LLMs into production (Claude, OpenAI, Gemini) with prompt engineering, tool calling, RAG, and real-time streaming via SSE and WebSockets. I design modular architectures, mentor engineers, and ship systems with strong engineering standards. I’m also founder of Archivolt, a live AI SaaS for validated software architecture.`;
 
 export const educationLine =
   "BS Computer Science — Virtual University of Pakistan";
