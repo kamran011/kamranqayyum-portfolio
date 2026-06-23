@@ -9,36 +9,34 @@ gsap.registerPlugin(useGSAP);
 
 const Work = () => {
   useGSAP(() => {
-    let translateX: number = 0;
-
-    function setTranslateX() {
+    const getTranslateX = () => {
       const box = document.getElementsByClassName("work-box");
-      if (!box.length) return;
+      if (!box.length) return 0;
       const rectLeft = document
         .querySelector(".work-container")!
         .getBoundingClientRect().left;
       const rect = box[0].getBoundingClientRect();
       const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-      let padding: number =
+      const padding: number =
         parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-    }
-
-    setTranslateX();
+      return rect.width * box.length - (rectLeft + parentWidth) + padding;
+    };
 
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".work-section",
         start: "top top",
-        end: `+=${translateX}`,
+        end: () => `+=${getTranslateX()}`,
         scrub: true,
         pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
         id: "work",
       },
     });
 
     timeline.to(".work-flex", {
-      x: -translateX,
+      x: () => -getTranslateX(),
       ease: "none",
     });
 
