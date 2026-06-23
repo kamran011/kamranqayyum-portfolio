@@ -17,7 +17,7 @@ export const siteMeta = {
   tagline: "Angular · TypeScript · Enterprise Web · AWS",
 } as const;
 
-export const aboutSummary = `Senior Angular engineer with 7+ years of experience designing and building enterprise-scale applications. I focus on frontend architecture, scalable UI systems, and high-performance SPAs with Angular, TypeScript, RxJS, and NgRx—plus cloud-native delivery on AWS with Node.js and serverless patterns. I’ve led feature work, mentored engineers, and shipped production systems with strong engineering standards.`;
+export const aboutSummary = `Full-stack engineer with 7+ years building enterprise-scale SaaS and AI-native applications. I work across the stack — Angular, TypeScript, RxJS, and NgRx on the frontend, Node.js and NestJS on the backend — with cloud-native delivery on AWS using serverless and Lambda patterns. I integrate LLMs into production (Claude, OpenAI, Gemini) with prompt engineering, tool calling, RAG, and real-time streaming via SSE and WebSockets. I design modular architectures, mentor engineers, and ship systems with strong engineering standards. I’m also founder of Archivolt, a live AI SaaS for validated software architecture.`;
 
 export const educationLine =
   "BS Computer Science — Virtual University of Pakistan";
@@ -86,7 +86,7 @@ export const whatIDoPillars: [WhatPillar, WhatPillar] = [
     title: "ENTERPRISE FRONTEND",
     subtitle: "Architecture & delivery",
     body:
-      "I design modular Angular applications, shared component libraries, and scalable state with RxJS and NgRx—typed APIs, performance tuning, and patterns that hold up in large codebases.",
+      "I design modular Angular applications, shared component libraries, and scalable state with RxJS and NgRx — typed APIs, performance tuning, and patterns that hold up in large codebases.",
     tags: [
       "Angular",
       "TypeScript",
@@ -102,7 +102,7 @@ export const whatIDoPillars: [WhatPillar, WhatPillar] = [
     title: "CLOUD & QUALITY",
     subtitle: "AWS · DevOps · standards",
     body:
-      "I ship alongside serverless Node on AWS—Lambda, Cognito, S3, CloudFront—and care about CI/CD, observability with CloudWatch, and secure, reviewable code.",
+      "I ship serverless Node on AWS — Lambda, Cognito, S3, CloudFront — and care about CI/CD, observability with CloudWatch, and secure, reviewable code.",
     tags: [
       "AWS Lambda",
       "Amazon Cognito",
@@ -196,5 +196,16 @@ export const projects: ProjectEntry[] = [
       "Agent desktop for omni-channel interactions with Amazon Connect and Twilio.",
     url: "https://omni-dev.omningage.click",
     image: "/images/projects/omningage.png",
+  },
+  {
+    name: "Archivolt",
+    industry: "Developer Tools / AI",
+    type: "AI-Powered System Design SaaS",
+    stack:
+      "Next.js 15, NestJS, Anthropic Claude API, PostgreSQL (Supabase), Polar.sh, Vercel",
+    description:
+      "A live AI SaaS that generates validated software architecture blueprints from plain-English descriptions. Includes Mermaid.js diagrams, tech-stack analysis, failure-mode detection, and subscription billing.",
+    url: "https://archivolt.dev",
+    image: "/images/projects/archivolt.png",
   },
 ];

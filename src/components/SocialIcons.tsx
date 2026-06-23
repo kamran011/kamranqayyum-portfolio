@@ -72,8 +72,8 @@ const SocialIcons = () => {
       </div>
       <a
         className="resume-button"
-        href="/Resume-Kamran-Qayyum.pdf"
-        download="Resume-Kamran-Qayyum.pdf"
+        href="/Kamran_Qayyum_Resume.pdf"
+        download="Kamran_Qayyum_Resume.pdf"
         data-cursor="disable"
       >
         <HoverLinks text="RESUME" />
