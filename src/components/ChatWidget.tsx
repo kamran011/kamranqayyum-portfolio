@@ -15,6 +15,7 @@ const ChatWidget = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showAttention, setShowAttention] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,6 +24,16 @@ const ChatWidget = () => {
       behavior: "smooth",
     });
   }, [messages, isOpen]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowAttention(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleToggle = () => {
+    setShowAttention(false);
+    setIsOpen((o) => !o);
+  };
 
   const sendMessage = async (e: FormEvent) => {
     e.preventDefault();
@@ -105,8 +116,10 @@ const ChatWidget = () => {
       )}
       <button
         type="button"
-        className="chat-toggle-btn"
-        onClick={() => setIsOpen((o) => !o)}
+        className={`chat-toggle-btn${
+          showAttention && !isOpen ? " chat-toggle-attn" : ""
+        }`}
+        onClick={handleToggle}
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         {isOpen ? "×" : "Chat"}

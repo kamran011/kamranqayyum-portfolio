@@ -10,6 +10,7 @@
 }
 
 .chat-toggle-btn {
+  position: relative;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -22,11 +23,52 @@
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(139, 143, 255, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: chatGlowPulse 2.6s ease-in-out infinite;
 }
 
 .chat-toggle-btn:hover {
   transform: scale(1.06);
   box-shadow: 0 6px 24px rgba(139, 143, 255, 0.45);
+}
+
+.chat-toggle-btn.chat-toggle-attn {
+  animation: chatGlowPulse 2.6s ease-in-out infinite,
+    chatAttnBounce 0.6s ease-in-out 2;
+}
+
+@keyframes chatGlowPulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(139, 143, 255, 0.3),
+      0 0 0 0 rgba(139, 143, 255, 0.35);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(139, 143, 255, 0.3),
+      0 0 0 10px rgba(139, 143, 255, 0);
+  }
+}
+
+@keyframes chatAttnBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  55% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-toggle-btn,
+  .chat-toggle-btn.chat-toggle-attn {
+    animation: none;
+  }
 }
 
 .chat-panel {
