@@ -107,6 +107,7 @@ const ChatWidget = () => {
               placeholder="Ask a question..."
               aria-label="Chat message"
               disabled={isLoading}
+              maxLength={500}
             />
             <button type="submit" disabled={isLoading || !input.trim()}>
               Send
