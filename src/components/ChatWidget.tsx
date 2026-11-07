@@ -53,17 +53,24 @@ const ChatWidget = () => {
         body: JSON.stringify({ messages: nextMessages }),
       });
 
+      const data = await res.json();
+
       if (!res.ok) {
-        throw new Error("Request failed");
+        throw new Error(
+          typeof data?.error === "string" ? data.error : "Request failed"
+        );
       }
 
-      const data = await res.json();
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: data.reply as string },
       ]);
-    } catch {
-      setError("Something went wrong. Please try again.");
+    } catch (err) {
+      setError(
+        err instanceof Error && err.message !== "Request failed"
+          ? err.message
+          : "Something went wrong. Please try again."
+      );
     } finally {
       setIsLoading(false);
     }
